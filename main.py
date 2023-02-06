@@ -14,7 +14,6 @@ import configparser
 import sys
 import os
 import pandas as pd
-import webview
 
 
     
