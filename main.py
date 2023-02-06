@@ -24,7 +24,7 @@ app.secret_key = 'secret key'
 
 @app.route("/")
 def começar():
-    return render_template("login.html")
+    return render_template("index.html")
 
 @app.route("/inicio")
 def inicio():
