@@ -272,6 +272,7 @@ def login():
 
 
     for x in sinais:
+        
         timeframe_retorno = Timeframe(x.split(';')[0])
         timeframe = 0 if (timeframe_retorno == 'error') else timeframe_retorno
         par = x.split(';')[1].upper()
@@ -361,6 +362,7 @@ def login():
     Mensagem(f' Lucro: R${str(round(lucroTotal, 2))}')
     sys.exit()
 
+    return render_template("index.html")
 
 if __name__=="__main__":
     app.run(debug=True)
