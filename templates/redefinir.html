@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>AGENDADOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    h1 {
+      color: white;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    body {
+        background-image: url(https://lh3.googleusercontent.com/IYdW8KCCp6d-SkTc9Zu3EVdIpvGQU2-pN6wdTwWFdIuKcDmDxfpUc4BY7HFtiThEIFjueOhgTtDfgQDu3OSncBpqbeaPwl61eQ-pkiDy4S57c_9FNZLLfARSVoBx-ARI_PTXe9a9eWzYgRwv0YEqifMaEIx_wKAavjSIlNNlmdaK5uMKdmzYxrZ4GEGxbUE6lHbOlQ6xhjMzyZrGCr6sqG9BvfjrxiBA1bi3zgMFl39xJdNePZvUsrSGX0PmHu_q_E4_10hm7FSPd9zxJOAletOYVQdC6TAkO35CNiWNj8tcerlnGyht8XPGzpvIIIzZeTaAc9Mo-9uqBAARbNNy5K-eddAYteOiIlPe0BNEDICqdmGbCh2g7cBtNaUUbK5erI6Vlp8oRDEFlXC8ib0XoRw3enoMZiUemv-3lTiF_cgidnrsgzNXDKpJ8dt2WauWPda7pF2GK9gxks8D6Nog84uy_hkoMddEyUTR689diqfrr0-kenCZ_DBuZkvCmgXGLkeBUQccPaYLONGY6q1Y-fMtGtn18SCjLoWf6Fh97sBCasZaChnGzKCJyQg1NzwRcFMM-rQWlhbk9gAij2wiJC7KKP-groLhwlxA1V5guNKUv0KNFAOLU9OxfY2p-8BdR52mPFxUTCloSe5Z_OPcdMX7EHaAGiibZtPJvmHJRZk8MiKVdeojBkkB-gZ3VTT3Y_fAQLNqN954KB0cbnVZwIYGOBX8AwexmeEVvS8LSF_SsapNQXdUV50njLdOfKu6Im8cZLszQV4D_sC3LIML7OlM7Mwaaeb5MABDR49dvIX5m9zpMcaYAqvidiIjhqGvYmiJHQtiNVhlenwuOlIA8lUeaXl4PlO6GV-VtCHSsZGg-ty_YtsR4qeFFh3_dz5_2P-pKaC-FFSnkiy2yfFjTbPX0LHTqS8kzUQmPVyVcuCRERgnbV5-Pjai6omTTxVo2lhMXN7ykLQATcgbk2gXw-eE1f4Lh896N3gL36okOG0bfYAfA32rZ342nCd6aSuh5PKcl-3i1keV9TwJvRBx5R3sWPc=w955-h637-no?authuser=0);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    form {
+        color: rgb(255, 255, 255);
+    }
+    hr {
+        color: black;
+    }
+    label {
+        color: rgb(0, 0, 0);
+    }
+   
+    .container {
+        width: 1000px;
+        margin: auto;
+      }
+    h1 {
+        text-align: center;
+      }
+    button {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border: 4px solid red;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: auto;
+      }
+      textarea {
+        width: 460px;
+        height: 50px;
+        font-size: 15px;
+        padding: 10px;
+      }
+</style>
+<body>
+    <div class="container">
+    <hr>
+    <h1>REDEFINIÇÃO DE SENHA</h1>
+    <hr>
+    <form action="redefinirsenha" method="POST">
+      <div class="mb-3">
+      <label for="nome" class="form-label">Username</label>
+      <input type="text" class="form-control" id="nome" name = "nome" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+      <label for="senha" class="form-label">Nova Senha</label>
+      <input type="password" class="form-control" id="senha" name = "senha">
+      </div>
+      <div class="mb-3">
+      <label for="newsenha" class="form-label">Confirmar Nova Senha</label>
+      <input type="password" class="form-control" id="newsenha" name = "newsenha" aria-describedby="contaHelp">
+      </div>
+      <button type="submit" class="btn btn-success">REDEFINIR SENHA</button>
+    </form>
+    <form action="inicio" style="background-color: rgba(255, 255, 255, 0.0); border: 4px solid rgba(255, 255, 255, 0.0); max-width: 1000px;">
+      <button type="submit" style="position:relative; left:430px;" class="btn btn-primary">BACK</button>
+      </form> 
+
+</body>
+</html>

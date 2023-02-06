@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>LOGIN IQOPTION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+        background-image: url(https://lh3.googleusercontent.com/IYdW8KCCp6d-SkTc9Zu3EVdIpvGQU2-pN6wdTwWFdIuKcDmDxfpUc4BY7HFtiThEIFjueOhgTtDfgQDu3OSncBpqbeaPwl61eQ-pkiDy4S57c_9FNZLLfARSVoBx-ARI_PTXe9a9eWzYgRwv0YEqifMaEIx_wKAavjSIlNNlmdaK5uMKdmzYxrZ4GEGxbUE6lHbOlQ6xhjMzyZrGCr6sqG9BvfjrxiBA1bi3zgMFl39xJdNePZvUsrSGX0PmHu_q_E4_10hm7FSPd9zxJOAletOYVQdC6TAkO35CNiWNj8tcerlnGyht8XPGzpvIIIzZeTaAc9Mo-9uqBAARbNNy5K-eddAYteOiIlPe0BNEDICqdmGbCh2g7cBtNaUUbK5erI6Vlp8oRDEFlXC8ib0XoRw3enoMZiUemv-3lTiF_cgidnrsgzNXDKpJ8dt2WauWPda7pF2GK9gxks8D6Nog84uy_hkoMddEyUTR689diqfrr0-kenCZ_DBuZkvCmgXGLkeBUQccPaYLONGY6q1Y-fMtGtn18SCjLoWf6Fh97sBCasZaChnGzKCJyQg1NzwRcFMM-rQWlhbk9gAij2wiJC7KKP-groLhwlxA1V5guNKUv0KNFAOLU9OxfY2p-8BdR52mPFxUTCloSe5Z_OPcdMX7EHaAGiibZtPJvmHJRZk8MiKVdeojBkkB-gZ3VTT3Y_fAQLNqN954KB0cbnVZwIYGOBX8AwexmeEVvS8LSF_SsapNQXdUV50njLdOfKu6Im8cZLszQV4D_sC3LIML7OlM7Mwaaeb5MABDR49dvIX5m9zpMcaYAqvidiIjhqGvYmiJHQtiNVhlenwuOlIA8lUeaXl4PlO6GV-VtCHSsZGg-ty_YtsR4qeFFh3_dz5_2P-pKaC-FFSnkiy2yfFjTbPX0LHTqS8kzUQmPVyVcuCRERgnbV5-Pjai6omTTxVo2lhMXN7ykLQATcgbk2gXw-eE1f4Lh896N3gL36okOG0bfYAfA32rZ342nCd6aSuh5PKcl-3i1keV9TwJvRBx5R3sWPc=w955-h637-no?authuser=0);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        background-color: white;
+        padding: 20px;
+        border-bottom: 2px solid black;
+      }
+      hr {
+        color: red;
+      }
+      h1 {
+        font-size: 36px;
+        color: white;
+        margin-top: 0;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        border: 2px solid red;
+        padding: 1px;
+      }
+
+      h2 {
+        font-size: 36px;
+        color: green;
+        margin-top: 0;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        border: 2px solid red;
+        padding: 1px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .container {
+        width: 1000px;
+        margin: auto;
+      }
+
+      button {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border: 4px solid red;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      textarea {
+        width: 460px;
+        height: 50px;
+        font-size: 15px;
+        padding: 10px;
+      }
+      button2 {
+        background-color:red;
+        position: absolute;
+        right:195px;
+        top: 1338px;
+      }
+    </style> 
+</head>
+<body>
+    <div class="container">
+    <hr>
+    <h1>LOGIN IQOPTION</h1>
+    <hr>
+  </form>
+  <form action="/inicio" style="background-color: rgba(255, 255, 255, 0.0); border: 4px solid rgba(255, 255, 255, 0.0);">
+    <button type="submit" style=" background-color: blue; color: white; " class="btn btn-success">BACK</button>
+  </form>
+        <form action="login" method="POST">
+            <div class="mb-3">
+            <label for="email" class="form-label">Email da IQOPTION</label>
+            <input type="email" class="form-control" id="email" name = "email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Conta somente da IQOPTION, demais não prossegue.</div>
+            </div>
+            <div class="mb-3">
+            <label for="senha" class="form-label">Password da IQOPTION</label>
+            <input type="password" class="form-control" id="senha" name = "senha">
+            </div>
+            <div class="mb-3">
+            <label for="conta" class="form-label">Conta REAL ou PRACTICE</label>
+            <input type="text" class="form-control" id="conta" name = "conta" aria-describedby="contaHelp">
+            <div id="contaHelp" class="form-text">REAL: conta real. | PRACTICE: conta demo.</div>
+            </div>
+  <hr>
+  <h2>CONFIGURAÇÕES AGENDADOR RICO$SINAIS</h2>
+  <hr>
+      <div class="col-md-6">
+          <label for="valor" class="form-label">VALOR DAS ENTRADAS</label>
+          <input type="text" class="form-control" id="valor" name = "valor" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Valor referente a quantia de cada entrada.</div>
+          </div>
+      <div class="col-md-6">
+          <label for="stopwin" class="form-label">STOP WIN</label>
+          <input type="text" class="form-control" id="stopwin" name = "stopwin" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Stop referente a quantia de lucro batida.</div>
+          </div>
+      <div class="col-md-6">
+          <label for="stoploss" class="form-label">STOP LOSS</label>
+          <input type="text" class="form-control" id="stoploss" name = "stoploss" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Stop referente a quantia de perca batida.</div>
+          </div>
+      <div class="col-md-6">
+          <label for="martingale" class="form-label">MARTINGALE (S OU N)</label>
+          <input type="text" class="form-control" id="martingale" name = "martingale" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Entrada de segurança e recuperanção. *digite S-para sim ou N-para não*</div>
+          </div>
+      <div class="col-md-6">
+          <label for="valorgale" class="form-label">VALOR GALE</label>
+          <input type="text" class="form-control" id="valorgale" name = "valorgale" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Valor referente a multiplicar a entrada para o Martingale. Ex.: 1.3</div>
+          </div>
+      <div class="col-md-6">
+          <label for="nivel" class="form-label">NÍVEL</label>
+          <input type="text" class="form-control" id="nivel" name = "nivel" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Quantidade de entradas de segurança e recuperação (Martingale). Ex.: 1-uma entrada, 2-duas entradas.</div>
+          </div>
+      <div class="col-md-6">
+          <label for="sorosgale" class="form-label">SOROSGALE</label>
+          <input type="text" class="form-control" id="sorosgale" name = "sorosgale" aria-describedby="valorHelp">
+          <div id="valorHelp" class="form-text">Entrada somente com o lucro. *digite S-para sim ou N-para não*</div>
+          </div>
+      <div class="col-md-6">
+          <label for="sinais">SINAIS:</label><br>
+          <textarea id="sinais" name="sinais" class="textbox" aria-describedby="valorHelp"></textarea>
+          <div id="valorHelp" class="form-text">Lista: ex.: M5;EURUSD-OTC;14:15:00;CALL</div>
+      </div>
+
+      <button type="submit" id="myButton" class="btn btn-success">AGENDAR</button>
+      <hr>
+      <p id="message" style="display:none;">Agendado com sucesso! Acompanhe agora seus resultados na plataforma IQOPTION</p>
+      <script>
+      document.getElementById("myButton").addEventListener("click", function() {
+        document.getElementById("message").style.display = "block";
+      });
+      </script>
+
+  </div>
+  </form>
+  <form action="/stop" style="background-color: rgba(255, 255, 255, 0.0); border: 4px solid rgba(255, 255, 255, 0.0);">
+    <button type="submit" style=" background-color: red; color: white; position:relative; left:430px;" class="btn btn-success">STOP</button>
+  </form>
+  
+</body>
+
+</html>
