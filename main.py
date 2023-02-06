@@ -26,7 +26,7 @@ app.secret_key = 'secret key'
 def começar():
     return render_template("index.html")
 
-@app.route("/inicio")
+@app.route("/inicio" )
 def inicio():
     return render_template("login.html")
 
@@ -243,7 +243,7 @@ def login():
             "erro"
 
     def Mensagem(mensagem):
-         print(mensagem)
+            return print(mensagem)
 
     logging.disable(level=(logging.DEBUG))
     API = IQ_Option(email, senha)
@@ -266,13 +266,8 @@ def login():
 
     sinais = carregaSinais()
 
-    
-
-
-
 
     for x in sinais:
-        
         timeframe_retorno = Timeframe(x.split(';')[0])
         timeframe = 0 if (timeframe_retorno == 'error') else timeframe_retorno
         par = x.split(';')[1].upper()
@@ -362,7 +357,7 @@ def login():
     Mensagem(f' Lucro: R${str(round(lucroTotal, 2))}')
     sys.exit()
 
-    return render_template("index.html")
+    
 
 if __name__=="__main__":
     app.run(debug=True)
