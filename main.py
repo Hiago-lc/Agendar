@@ -243,7 +243,10 @@ def login():
             "erro"
 
     def Mensagem(mensagem):
-            return print(mensagem)
+        print(mensagem)
+
+
+  
 
     logging.disable(level=(logging.DEBUG))
     API = IQ_Option(email, senha)
@@ -355,9 +358,9 @@ def login():
     banca_att = banca()
     Mensagem(f' Banca: R${banca_att}')
     Mensagem(f' Lucro: R${str(round(lucroTotal, 2))}')
-    sys.exit()
-
+    return render_template("mensagem.html")
     
+
 
 if __name__=="__main__":
     app.run(debug=True)
