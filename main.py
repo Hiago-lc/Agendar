@@ -318,7 +318,7 @@ def login():
 
                     # print(resultado)
                     if resultado == 'error':
-                        break
+                        return "opção erro"
 
                     if resultado == 'win' or resultado == 'doji':
                         break
