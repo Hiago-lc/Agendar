@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <head>
     <meta charset='utf-8'>
     <title>LOGIN IQOPTION</title>
@@ -91,7 +92,7 @@
   <form action="/inicio" style="background-color: rgba(255, 255, 255, 0.0); border: 4px solid rgba(255, 255, 255, 0.0);">
     <button type="submit" style=" background-color: blue; color: white; " class="btn btn-success">BACK</button>
   </form>
-        <form action="login" method="POST">
+        <form id="myForm">
             <div class="mb-3">
             <label for="email" class="form-label">Email da IQOPTION</label>
             <input type="email" class="form-control" id="email" name = "email" aria-describedby="emailHelp">
@@ -149,17 +150,38 @@
           <textarea id="sinais" name="sinais" class="textbox" aria-describedby="valorHelp"></textarea>
           <div id="valorHelp" class="form-text">Lista: ex.: M5;EURUSD-OTC;14:15:00;CALL</div>
       </div>
-
       <button type="submit" id="myButton" class="btn btn-success">AGENDAR</button>
       <hr>
-      <p id="message" style="display:none;">Agendado com sucesso! Acompanhe agora seus resultados na plataforma IQOPTION</p>
+      <p id="message" style="display:none;">Lista agendada com sucesso! Acompanhe seus resultados na IQOPTION.</p>
       <script>
       document.getElementById("myButton").addEventListener("click", function() {
         document.getElementById("message").style.display = "block";
       });
       </script>
+    
+    <script>
+      $("#myForm").submit(function(event) {
+  event.preventDefault();
+  
+  var formData = $(this).serialize();
 
-  </div>
+  $.ajax({
+  type: "POST",
+  url: "/login",
+  data: formData,
+  contentType: "application/x-www-form-urlencoded",
+  success: function(response) {
+    // Código de sucesso aqui
+  },
+  error: function(error) {
+    // Código de erro aqui
+  }
+});
+
+});
+
+    </script>
+
   </form>
   <form action="/stop" style="background-color: rgba(255, 255, 255, 0.0); border: 4px solid rgba(255, 255, 255, 0.0);">
     <button type="submit" style=" background-color: red; color: white; position:relative; left:430px;" class="btn btn-success">STOP</button>

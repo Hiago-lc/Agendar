@@ -1,4 +1,4 @@
-from flask import Flask , render_template, session, request, redirect, url_for
+from flask import Flask , render_template, session,jsonify ,request, redirect, url_for
 from flask.globals import request
 from datetime import datetime
 from iqoptionapi.stable_api import IQ_Option
@@ -77,6 +77,7 @@ def stop():
 
 @app.route("/login", methods=["POST","GET"])
 def login():
+
     email = request.form.get('email')
     senha = request.form.get('senha')
     conta = request.form.get('conta')
@@ -93,12 +94,13 @@ def login():
     sinais_concatenados = []
     for sinal in sinais_list:
         sinais_concatenados.append(sinal.replace("\n", ""))
-
     sinais_string = "".join(sinais_concatenados)
     
     
 
-
+ 
+   
+    
     def Martingale(valor):
         valorGale = float(valorgale)
         lucro_esperado = float(valor) * valorGale
@@ -244,6 +246,7 @@ def login():
 
     def Mensagem(mensagem):
         print(mensagem)
+        
 
 
   
@@ -358,7 +361,13 @@ def login():
     banca_att = banca()
     Mensagem(f' Banca: R${banca_att}')
     Mensagem(f' Lucro: R${str(round(lucroTotal, 2))}')
-    return render_template("mensagem.html")
+    
+    response = {"success": True}
+    return jsonify(response)
+    
+
+    
+    
     
 
 
